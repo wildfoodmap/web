@@ -6,6 +6,12 @@ Router.map(function() {
   // this.resource('posts', function() {
   //   this.route('new');
   // });
+
+  this.resource('sightings', function () {
+      this.route('index', { path: '/'});
+      this.route('new');
+  });
+  this.resource('sighting', { path: 'sightings/:sighting_id'});
 });
 
 export default Router;
